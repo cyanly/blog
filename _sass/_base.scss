@@ -149,12 +149,13 @@ code {
 pre {
     //padding: 8px 12px;
     overflow-x: auto;
+    word-wrap: normal;
 
     > code {
         border: 0;
         padding-right: 0;
         padding-left: 0;
-        white-space: pre; 
+        white-space: pre;
     }
 }
 
