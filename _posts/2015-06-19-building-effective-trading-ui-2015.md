@@ -137,6 +137,7 @@ And those market data cells are ticking directly at DOM object:
 <img src="/images/effectively-ui/DOMUpdate.gif" alt="Updating DOM Directly" style="width: 550px;"></img>
 
 Similar techniques are also applied to some of the heaviest updating widgets, like DMA trading widgets.
+
 ![IPad Trading](/images/effectively-ui/webtrader_s3.png)
 
 or for mobile platforms:
@@ -152,8 +153,8 @@ With great power comes great responsibility. Modern GPU accelerated CSS styling 
 - **Neutral Colour Scheme** provides enough visual stimulation to keep the audience interested, while still allowing them enough mental freedom. Mac OS X (pre-Yosemite) is the perfect example.
 
 - **Visual Continuity**: motion describes spatial relationships, functionality, and intention with fluidity
-<img src="/images/effectively-ui/bidaskanim.gif" alt="Drawing" style="width: 150px;"></img>
+<img src="/images/effectively-ui/bidaskanim.gif" alt="Drawing" style="width: 150px;"/>
 
 - Responsive interaction encourages deeper exploration of an app by creating timely, logical, and delightful screen reactions to user input. Each interaction is thoughtful, perhaps whimsical, but **never distracting**.
 
-<img src="/images/effectively-ui/fillanim.gif" alt="Drawing" style="width: 450px;"></img>
+<img src="/images/effectively-ui/fillanim.gif" alt="Drawing" style="width: 450px;"/>

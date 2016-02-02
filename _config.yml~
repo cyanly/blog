@@ -18,7 +18,7 @@ linkedin_username:  cyanly
 
 # Build settings
 markdown: kramdown
-permalink: /blog/:title
+permalink: /:title
 
 gems:
 - jekyll-mentions
