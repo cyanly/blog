@@ -38,7 +38,7 @@ $ go get github.com/cyanly/gotrade
   - Protocol backward compatibility.
 
 ## Design
-{% highlight text %}
+{% highlight text  %}
 └─ gotrade/
    ├─ core/                 -> The low-level API that gives consumers all the knobs they need
    │  ├─ order/
