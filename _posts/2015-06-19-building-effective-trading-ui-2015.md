@@ -134,7 +134,9 @@ By offloading heavy burden on pricing rendering, our profiling now looks like th
 ![Optimising DOM Update 2](/images/effectively-ui/devtools2.png)
 
 And those market data cells are ticking directly at DOM object:
-<img src="/images/effectively-ui/DOMUpdate.gif" alt="Updating DOM Directly" style="width: 550px;"></img>
+<p align="center">
+<img src="/images/effectively-ui/DOMUpdate.gif" alt="Updating DOM Directly" style="width: 550px;"/>
+</p>
 
 Similar techniques are also applied to some of the heaviest updating widgets, like DMA trading widgets.
 
@@ -153,8 +155,11 @@ With great power comes great responsibility. Modern GPU accelerated CSS styling 
 - **Neutral Colour Scheme** provides enough visual stimulation to keep the audience interested, while still allowing them enough mental freedom. Mac OS X (pre-Yosemite) is the perfect example.
 
 - **Visual Continuity**: motion describes spatial relationships, functionality, and intention with fluidity
+<p align="center">
 <img src="/images/effectively-ui/bidaskanim.gif" alt="Drawing" style="width: 150px;"/>
+</p>
 
 - Responsive interaction encourages deeper exploration of an app by creating timely, logical, and delightful screen reactions to user input. Each interaction is thoughtful, perhaps whimsical, but **never distracting**.
-
+<p align="center">
 <img src="/images/effectively-ui/fillanim.gif" alt="Drawing" style="width: 450px;"/>
+</p>
