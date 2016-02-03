@@ -57,9 +57,10 @@ $ go get -u github.com/cyanly/gotrade
 ## Examples
 
 Pre-Requisites:
+
   - Go 1.4 or higher
-  - ``` go get github.com/erikstmartin/go-testdb ```
-  - ``` go get github.com/nats-io/gnatsd ```
+  - `go get github.com/erikstmartin/go-testdb `
+  - `go get github.com/nats-io/gnatsd `
 
 
 The best way to see goTrade in action is to take a look at tests (see Benchmark section below):<br>
@@ -79,7 +80,7 @@ $ go test -v
 
 ## Benchmark
 
-Machine: `Intel Core i5 CPU @ 2.80GHz` + `Ubuntu 14.04 Desktop x86_64`
+Machine: ```Intel Core i5 CPU @ 2.80GHz` + `Ubuntu 14.04 Desktop x86_64```
 
   - `test/benchmark/client2fix_test.go`
   - **CL &#8658; OR**:   <br>*Client send order protobuf to OrderRouter(OR)*
@@ -100,7 +101,7 @@ Excluded:
 
   - Database transaction time (hard-wired to an inline mock DB driver) 
 
-Result:   **`0.176ms per op,  5670 order+fill pairs per sec`**
+Result:   **```0.176ms per op,  5670 order+fill pairs per sec```**
 
 <p align="center">
   <img src="https://cdn.rawgit.com/cyanly/gotrade/gh-pages/benchmark.png" alt=""/>
