@@ -49,7 +49,41 @@ Our next true friend after JavaScript, is DevTools. For the past decade of UI cr
 
 Our goal is to render faster, therefore time-space trade-off is unavoidable and it really is not a thing. A typical trader spec workstation has at least 16 gigabytes of memory, next to a cache-rich Intel Xeon processor, not far from multiple workstation GPUs. Implementation first, optimization later, try not start with server side tricks to micromanage memory allocations or worry about GC: **When in doubt, simply cache it.** JavaScript gives us flexible dynamic object model, even better now that JSON became major encoding standard across languages, modern browsers are equipped with powerful profiling tools, use them.
 
-Another fundamental difference between UI and server-side programming, is that we dealing with human ourselves, not bytes. Processing throughput and nanosecond level operations is crucial to computer programs, but numerical value fractional ticking between 100ms is trivial to most human brains. During busy market, some contracts can generate 3000 to 4000 updates per seconds, each quote change is crucial to maintain consistent order book from its exchanges, but there is absolutely no value to render this real-time on screen for human eyes. Below is one type of common code pattern for conflation.
+Another fundamental difference between UI and server-side programming, is that we dealing with human ourselves, not bytes. Processing throughput and nanosecond level operations is crucial to computer programs, but numerical value fractional ticking between 100ms is trivial to most human brains. During busy market, some contracts can generate 3000 to 4000 updates per seconds, each quote change is crucial to maintain consistent order book from its exchanges, but there is absolutely no value to render this real-time on screen for human eyes. 
+
+
+> Option 1: window.requestAnimationFrame: 
+
+Scientifically best approach, but your program needs to be structured in a producer consumer pattern. I have yet only used this method in extremely busy market data widgets.
+
+{% highlight javascript linenos %}
+    // Processing market data provider's real-time pricing ticks
+    Pricefeed.Socket.on('quote',
+        (quote) => {
+            quoteQueue.push(quote);
+
+            if ( quoteQueue.length > 200 ) {
+                quoteQueue.shift();
+            }
+        });
+
+    function QueueDrainer {
+        if ( ! window.requestAnimationFrame || 1==1) {
+            setTimeout(renderQuote, 200);
+        } else {
+            window.requestAnimationFrame(renderQuote);
+        }
+    }
+
+
+    function renderQuote {
+        // ...
+    }
+{% endhighlight %}
+
+> Option 2: cache and set a throttle timer
+
+Works well for human eyes, and optimisation does not require refactoring javascript program.
 
 {% highlight javascript linenos %}
 // Processing market data provider's real-time pricing ticks
