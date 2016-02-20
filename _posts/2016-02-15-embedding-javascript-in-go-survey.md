@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Embedding JavaScript Engine in Go, a survey"
-date:   2016-01-23 00:00:00 +0000
+date:   2016-02-15 00:00:00 +0000
 categories: coding go javascript
 ---
 
