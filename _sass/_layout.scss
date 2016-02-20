@@ -215,9 +215,9 @@
 }
 
 .post-title {
-    font-size: 42px;
+    font-size: 38px;
     letter-spacing: -1px;
-    line-height: 1;    
+    line-height: 1;
     padding-top: 1em;
 
     @include media-query($on-laptop) {
