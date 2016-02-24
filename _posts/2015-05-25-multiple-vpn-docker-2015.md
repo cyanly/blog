@@ -8,6 +8,7 @@ categories: coding docker node
 #### The Problem
 
 At early stage of [KNXMonitor.com](http://www.knxmonitor.com) this has been top 1 hard-to-solve-next-to-impossible on our task board. There is no connection security mechanism comes with KNX standard. Smart-building installers would setup VPN server on client's router to fence the house from hackers turning it into their private reality TV channel. As a cloud debugging product we would not want any user had their automated building wide open on the Internet. However for us, it requires a system designed to be able to maintain many *outgoing* VPN connections from single server to hundreds or thousands of building's IP addresses, within feasible cost.
+
 - One server should be able to connect as VPN client to many VPN servers
 - It needs to be fast to start initiating a connection
 - Each connection needs to have next to native footprint
