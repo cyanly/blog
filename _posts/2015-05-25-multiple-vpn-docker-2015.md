@@ -64,6 +64,7 @@ RUN yum -y install tar
 RUN curl -sL https://rpm.nodesource.com/setup | bash -
 RUN yum install -y nodejs
 RUN curl http://nodejs.org/dist/v0.12.2/node-v0.12.2-linux-x64.tar.gz | tar xvzf - -C /usr --strip-components=1
+RUN npm install commander
 
 RUN yum -y install pptp
 RUN yum -y install net-tools
